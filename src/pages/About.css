@@ -1,8 +1,69 @@
 .page-container {
+  max-width: 800px;
+  margin: 2rem auto;
   padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.page-container p {
+.page-container h2 {
+  color: #007bff;
+  margin-bottom: 1.5rem;
+}
+
+.about-content {
+  text-align: left;
+}
+
+.about-content p {
+  font-size: 1rem;
   line-height: 1.6;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.features-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.features-section h3 {
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  flex: 1 1 300px; /* This makes the cards flexible and responsive */
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h4 {
+  margin-top: 0;
+  color: #007bff;
+  font-size: 1.15rem;
+}
+
+.feature-card p {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
 }

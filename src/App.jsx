@@ -14,7 +14,7 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
-        return <Home />;
+        return <Home setCurrentPage={setCurrentPage} />; // Pass the function here
       case 'about':
         return <About />;
       case 'report':
@@ -26,12 +26,12 @@ function App() {
       case 'dashboard':
         return <Dashboard />;
       default:
-        return <Home />;
+        return <Home setCurrentPage={setCurrentPage} />;
     }
   };
 
   return (
-    <div>
+    <div className="app-container">
       <Navbar setCurrentPage={setCurrentPage} />
       <main>
         {renderPage()}

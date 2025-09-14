@@ -1,0 +1,23 @@
+.page-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.page-container h2 {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.page-container p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

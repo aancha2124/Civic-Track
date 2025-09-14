@@ -11,6 +11,12 @@ nav h1 {
   font-size: 1.5rem;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Adds space between the list and the button */
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -19,7 +25,7 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 1rem;
+  margin: 0 0.75rem; /* Adjusts spacing between links */
 }
 
 nav a {

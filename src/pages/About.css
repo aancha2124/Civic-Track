@@ -1,69 +1,86 @@
-.page-container {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+/* Styling for the About Section */
+.about-section {
+  padding: 4rem 2rem;
+  background-color: var(--card-background); /* A clean white background */
+  border-top: 1px solid var(--border-color);
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-header {
   text-align: center;
+  margin-bottom: 3rem;
 }
 
-.page-container h2 {
-  color: #007bff;
-  margin-bottom: 1.5rem;
+.about-header h2 {
+  font-size: 2.8rem;
+  color: var(--primary-color); /* Themed maroon color */
+  margin-bottom: 0.5rem;
 }
 
-.about-content {
-  text-align: left;
+.about-header .subtitle {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.about-content p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #555;
-  margin-bottom: 1.5rem;
-}
-
-.features-section {
-  margin-top: 3rem;
+.how-it-works {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
-.features-section h3 {
-  color: #333;
+.how-it-works h3 {
+  font-size: 2rem;
+  color: var(--text-color);
   margin-bottom: 2rem;
-  font-size: 1.5rem;
 }
 
-.features-grid {
+.steps-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
 }
 
-.feature-card {
-  background-color: #f8f9fa;
-  border: 1px solid #e9ecef;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
-  flex: 1 1 300px; /* This makes the cards flexible and responsive */
+.step-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 320px;
+  padding: 2rem;
+  background-color: var(--background-color); /* Light cream background */
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
 }
 
-.feature-card:hover {
-  transform: translateY(-5px);
+.step-card h4 {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.feature-card h4 {
-  margin-top: 0;
-  color: #007bff;
-  font-size: 1.15rem;
+.our-vision {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
 }
 
-.feature-card p {
-  margin: 0;
-  color: #666;
-  font-size: 0.95rem;
+.our-vision h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.our-vision p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
 }

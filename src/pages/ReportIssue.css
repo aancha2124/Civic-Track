@@ -1,60 +1,85 @@
+/* --- Styling for the Report Issue Page ("Crimson & Gold" Theme) --- */
+
 .page-container {
-  max-width: 600px;
-  margin: 2rem auto;
+  max-width: 800px; /* Constrains width for better readability on large screens */
+  margin: 2rem auto; /* Centers the container on the page with space on top/bottom */
   padding: 2rem;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .page-container h2 {
   text-align: center;
-  color: #007bff;
+  color: var(--primary-color); /* Uses the theme's maroon color */
   margin-bottom: 2rem;
+  font-size: 2.5rem;
 }
 
+/* We'll wrap the form in a "card" style to make it stand out */
+form {
+  background-color: var(--card-background);
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Provides vertical spacing between each form field */
 .form-group {
   margin-bottom: 1.5rem;
 }
 
 .form-group label {
-  display: block;
+  display: block; /* Puts the label on its own line */
+  font-weight: 600;
   margin-bottom: 0.5rem;
-  font-weight: bold;
+  color: var(--text-color);
 }
 
-.form-group input,
-.form-group textarea,
-.form-group select {
+/* Consistent styling for all input fields */
+input[type="text"],
+textarea,
+select {
   width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-family: inherit;
+  padding: 12px;
   font-size: 1rem;
+  font-family: inherit; /* Uses the same font as the rest of the site */
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: #fcfcfc; /* A very light background for inputs */
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-  outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
-}
-
-button[type="submit"] {
-  width: 100%;
-  padding: 1rem;
-  font-size: 1rem;
-  margin-top: 1.5rem;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 5px;
+/* Custom styling for the file input to make it look less plain */
+input[type="file"] {
+  padding: 10px;
+  background-color: #f7f7f7;
   cursor: pointer;
 }
 
+/* Highlight the active field for the user, using the theme's accent color */
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(199, 168, 124, 0.25); /* A soft glow using the accent color */
+}
+
+/* Styling for the main submit button */
+button[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--primary-text-color);
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 1rem;
+}
+
 button[type="submit"]:hover {
-  background-color: #218838;
+  background-color: var(--hover-color);
 }

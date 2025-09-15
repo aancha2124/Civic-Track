@@ -1,8 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* --- GLOBAL SETTINGS --- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- THEME VARIABLES ("Crimson & Gold") --- */
+:root {
+  /* Core Palette */
+  --primary-color: #900C3F;     /* Rich Crimson/Maroon */
+  --accent-color: #C7A87C;      /* Muted Gold/Tan */
+  --background-color: #FDF6E3;  /* Warm Parchment Cream */
+  --text-color: #343a40;        /* Dark Charcoal */
+
+  /* UI Elements */
+  --card-background: #FFFFFF;
+  --border-color: #DEE2E6;
+  --hover-color: #B59261;          /* A slightly darker gold for hover */
+  --primary-text-color: #FFFFFF;   /* White text for the dark maroon background */
+}
+
+/* --- GLOBAL STYLES --- */
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
 .app-container {

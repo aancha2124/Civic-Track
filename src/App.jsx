@@ -6,7 +6,7 @@ import About from './pages/About';
 import ReportIssue from './pages/ReportIssue';
 import TrackIssues from './pages/TrackIssues';
 import Community from './pages/Community';
-import Dashboard from './pages/Dashboard';
+import LoginSignup from './pages/LoginSignup'; // 1. Import the new page
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -14,7 +14,7 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
-        return <Home setCurrentPage={setCurrentPage} />; // Pass the function here
+        return <Home />;
       case 'about':
         return <About />;
       case 'report':
@@ -23,10 +23,10 @@ function App() {
         return <TrackIssues />;
       case 'community':
         return <Community />;
-      case 'dashboard':
-        return <Dashboard />;
+      case 'login': // 2. Add the new 'case' for the login/signup page
+        return <LoginSignup />;
       default:
-        return <Home setCurrentPage={setCurrentPage} />;
+        return <Home />;
     }
   };
 

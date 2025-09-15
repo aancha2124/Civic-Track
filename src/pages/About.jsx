@@ -1,38 +1,49 @@
+import React from 'react';
 import './About.css';
 
+// You can use an icon library like 'react-icons' for a more professional look
+// For example: import { FaBullseye, FaChartLine, FaUsers } from 'react-icons/fa';
+
 function About() {
-  const keyFeatures = [
-    { title: 'Civic Issue Reporting', description: 'Citizens can report issues with photos, descriptions, and real-time location using a simple form.' },
-    { title: 'Admin Dashboard', description: 'Authorities can view, manage, and assign reported issues to different departments.' },
-    { title: 'Issue Tracking', description: 'Users can track the status of their reported issues from "Submitted" to "Resolved."' },
-    { title: 'Community Feed', description: 'A platform for community members to share updates and discuss local topics.' },
-    { title: 'Map-Based View', description: 'Administrators can see a map-based overview of all reported problems to identify issue clusters.' },
-  ];
-
   return (
-    <div className="page-container">
-      <h2>About CivicTrack</h2>
-      <div className="about-content">
-        <p>
-          CivicTrack is a crowdsourced civic issue reporting and resolution system, developed as a project for the Smart India Hackathon 2025. Our mission is to empower citizens to be active participants in the cleanliness and maintenance of their communities.
-        </p>
-        <p>
-          The platform was created to address Problem Statement SIH-25031 from the Government of Jharkhand, which called for a web-based system where citizens can easily report issues such as garbage, potholes, and broken streetlights.
-        </p>
-      </div>
-
-      <div className="features-section">
-        <h3>Key Features</h3>
-        <div className="features-grid">
-          {keyFeatures.map((feature, index) => (
-            <div className="feature-card" key={index}>
-              <h4>{feature.title}</h4>
-              <p>{feature.description}</p>
-            </div>
-          ))}
+    // The id="about" is crucial for the smooth scrolling to work
+    <section id="about" className="about-section">
+      <div className="about-container">
+        <div className="about-header">
+          <h2>Our Mission</h2>
+          <p className="subtitle">Empowering citizens to build better, more accountable cities together.</p>
         </div>
+
+        <div className="how-it-works">
+          <h3>How It Works</h3>
+          <div className="steps-container">
+            <div className="step-card">
+              {/* <FaBullseye size={50} className="step-icon" /> */}
+              <h4>1. Spot & Report</h4>
+              <p>See a civic issue like a pothole or a broken streetlight? Snap a photo and submit a report in minutes through our easy-to-use platform.</p>
+            </div>
+            <div className="step-card">
+              {/* <FaChartLine size={50} className="step-icon" /> */}
+              <h4>2. Track Progress</h4>
+              <p>Your report is publicly visible. You and your community can track its status in real-time as it gets acknowledged and resolved by local authorities.</p>
+            </div>
+            <div className="step-card">
+              {/* <FaUsers size={50} className="step-icon" /> */}
+              <h4>3. Drive Change</h4>
+              <p>Every report contributes to a powerful dataset, helping city planners identify problem areas and improve our community for everyone.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="our-vision">
+          <h3>Our Vision for a Smarter City</h3>
+          <p>
+            CivicTrack is more than just a reporting tool; it's a collaborative bridge between citizens and their government. We envision a future where data-driven decisions lead to faster solutions and greater transparency, fostering a culture of accountability and civic pride. This platform is our contribution to that future, built as part of the Smart India Hackathon.
+          </p>
+        </div>
+
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -1,50 +1,119 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* --- Final Home.css --- */
+
+.home-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.page-container {
-  min-height: calc(100vh - 120px); /* full height minus navbar + footer */
-  width: 100%;                     /* take full screen width */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* center vertically */
-  align-items: center;     /* center horizontally */
+.home-header {
   text-align: center;
-  background-color: #f8f9fa; /* background across full width */
-  margin: 0;
-  padding: 0;
-}
-
-.page-container h2 {
-  font-size: 2.5rem;
-  color: #007bff;
-  margin-bottom: 1rem;
-}
-
-.page-container p {
-  font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
-button {
-  background-color: #007bff;
-  color: white;
+.home-header h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color); /* Uses the maroon theme color */
+}
+
+.home-header p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+/* You might need to add this class to your global CSS if it's not there */
+.button-cta {
+  background-color: var(--accent-color);
+  color: var(--primary-text-color);
   padding: 12px 24px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 1rem;
 }
-.page-container .card {
+
+.button-cta:hover {
+  background-color: var(--hover-color);
+}
+
+/* Style for the grid container */
+.issues-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Responsive grid */
+  gap: 2rem;
+}
+
+/* The main card style */
+.issue-card {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.issue-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.issue-card img {
   width: 100%;
-  max-width: 100%;
-  border-radius: 0;  /* optional: remove rounded edges */
+  height: 200px;
+  object-fit: cover;
+  display: block;
 }
+
+.issue-card-content {
+  padding: 1rem 1.25rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.issue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.issue-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0 0 0.5rem 0;
+}
+
+.issue-location, .issue-date {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  margin: 0.25rem 0;
+}
+
+.issue-date {
+  margin-top: auto; /* Pushes the date to the bottom */
+  padding-top: 0.5rem;
+}
+
+/* Status badges */
+.issue-status {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-weight: bold;
+  color: white;
+  font-size: 0.75rem;
+  flex-shrink: 0; /* Prevents the badge from shrinking */
+}
+
+.status-open { background-color: #D32F2F; } /* Red */
+.status-in-progress { background-color: #FB8C00; } /* Orange */
+.status-resolved { background-color: #2E7D32; } /* Green */

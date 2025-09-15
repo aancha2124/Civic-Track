@@ -1,7 +1,35 @@
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #333;
-  color: white;
+/* Replaces your entire Footer.css file */
+.site-footer {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  padding: 2rem 1rem;
   margin-top: auto;
+  text-align: center;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0; /* Margin at the bottom to space it from the copyright */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows links to wrap on small screens */
+  gap: 1.5rem; /* Space between links */
+}
+
+.footer-links a {
+  color: #d2c5d6; /* A slightly dimmer white for links */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: var(--primary-text-color); /* Brightens to full white on hover */
+}
+
+.footer-copyright {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #a7a7a7; /* A soft light grey for the copyright */
 }
